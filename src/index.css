@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter-Regular.woff);
+}
+@font-face {
+  font-family: Manrope;
+  src: url(fonts/Manrope-Regular.woff);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Manrope;
+}
+.container{
+  max-width: 1332px;
+  width: 100%;
+  margin: auto;
+  padding: 0 16px;
+}
+.container2{
+  max-width: 1514px;
+  width: 100%;
+  margin: auto;
+  padding: 0 16px;
+}
+li{
+  list-style: none;
+}
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+img{
+  width: 100%;
+}

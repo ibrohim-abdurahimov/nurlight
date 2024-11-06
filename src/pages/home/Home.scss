@@ -1,0 +1,54 @@
+.hero{
+    &__wrapper{
+        border-radius: 50px;
+        background-color: #F2F2F2;
+        padding: 0 180px;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 200px;
+        align-items: center;
+    }
+}
+.category{
+    margin-top: 80px;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        p{
+            color: #454545;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        button{
+            padding: 14px 48px;
+            background-color: #fff;
+            border: 1px solid #454545;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 100px;
+            color: #454545;
+        }
+    }
+    &__wrapper{
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    &__card{
+        padding:  32px;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        &_text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &_img{
+            width: 200px;
+        }
+    }
+}

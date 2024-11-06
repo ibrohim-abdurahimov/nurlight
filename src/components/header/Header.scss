@@ -1,0 +1,85 @@
+.header{
+    margin-top: 12px;
+    padding-bottom: 70px;
+    .navbar{
+        &__top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 600;
+            &_collection{
+                display: flex;
+                gap: 25px;
+                color: #454545;
+                
+            }
+            span{
+                opacity: 0.7;
+            }
+            strong{
+                color: #454545;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+        &__body{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 12px;
+            text-align: center;
+            svg{
+                font-size: 20px;
+            }
+            &_menu{
+                display: none;
+            }
+            &_logo{
+                .logo{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p{
+                        font-size: 30px;
+                        font-family: Inter;
+                    }
+                }
+            }
+            &_btn button{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 14px 28px;
+                font-size: 16px;
+                background-color: #454545;
+                border-radius: 100px;
+                color: #fff;
+                border: 1px solid #454545;
+            }
+            &_btn button:hover{
+                background-color: #fff;
+                color: #454545;
+                border: 1px solid #454545;
+            }
+            &_inp{
+                max-width: 600px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #454545;
+                border: 1px solid #454545;
+                padding: 14px 18px 14px 24px;
+                border-radius: 100px;
+                input{
+                    width: 100%;
+                    border: none;
+                    padding: 5px 15px 5px 5px;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
