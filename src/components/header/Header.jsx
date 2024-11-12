@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import "./Header.scss"
 import logo from "../../assets/logo (8).svg"
@@ -10,59 +10,66 @@ import { FiShoppingCart } from "react-icons/fi";
 
 
 const Header = () => {
+    const [show, setShow] = useState(false)
     return (
         <header className='header'>
             <div className="container">
                 <nav className="navbar">
-                    <div className="navbar__top">
+                    {
+                        show &&
+                        <div onClick={() => setShow(false)} className="navbar__overlay"></div>
+                    }
+                    <div className={`navbar__top ${show ? "show" : ""}`}>
                         <ul className="navbar__top_collection">
-                            <li className="navbar__top_item">
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
                                 <NavLink to={"/about"}>
                                     <span>О компании</span>
                                 </NavLink>
                             </li>
-                            <li>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
                                 <NavLink to={"/payment"}>
                                     <span>Доставка и оплата</span>
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
+                                <NavLink to={"/return"}>
                                     <span>Возврат</span>
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
+                                <NavLink to={"/garant"}>
                                     <span>Гарантии</span>
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
+                                <NavLink to={"/contact"}>
                                     <span>Контакты</span>
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
+                                <NavLink to={"/blog"}>
                                     <span>Блог</span>
                                 </NavLink>
                             </li>
                         </ul>
                         <ul className="navbar__top_collection">
-                            <li className="navbar__top_item">
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
                                 <strong>8 (800) 890-46-56</strong>
                             </li>
-                            <li>
+                            <li onClick={() => setShow(false)} className="navbar__top_item">
                                 <span>Заказать звонок</span>
                             </li>
                         </ul>
                     </div>
                     <div className="navbar__body">
-                        <div className="navbar__body_menu">
+                        <div onClick={() => setShow(true)} className="navbar__body_menu">
                             <MdSegment />
                         </div>
                         <div className="navbar__body_logo">
                             <NavLink to={"/"} className="logo">
-                                <img src={logo} alt="" />
+                                <div>
+                                    <img src={logo} alt="" />
+                                </div>
                                 <p>NORNLIGHT</p>
                             </NavLink>
                         </div>
@@ -76,17 +83,19 @@ const Header = () => {
                             <input type="search" placeholder='Поиск по товарам' />
                             <IoIosSearch />
                         </div>
-                        <div className="navbar__body_like">
-                            <FaRegHeart />
-                            Избранное
-                        </div>
-                        <div className='navbar__body_comparison'>
-                            <RiBarChartGroupedLine />
-                            Сравнение
-                        </div>
-                        <div className="navbar__body_basket">
-                            <FiShoppingCart />
-                            Корзина
+                        <div className="navbar__body_addition">
+                            <div className="navbar__body_icon">
+                                <FaRegHeart />
+                                Избранное
+                            </div>
+                            <div className='navbar__body_icon'>
+                                <RiBarChartGroupedLine />
+                                Сравнение
+                            </div>
+                            <div className="navbar__body_icon">
+                                <FiShoppingCart />
+                                Корзина
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -95,4 +104,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default memo(Header) 

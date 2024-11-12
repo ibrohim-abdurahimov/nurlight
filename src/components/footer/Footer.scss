@@ -1,0 +1,108 @@
+.footer{
+    margin-top: 15px;
+    color: #454545;
+    background-color: #F2F2F2;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        
+    }
+    &__card{
+        &_logo{
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            p{
+                font-size: 35px;
+                font-family: Inter;
+            }
+        }
+        &_num{
+            margin-top: 50px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        &_img{
+            max-width: 215px;
+            width: 100%;
+            margin-top: 35px;
+        }
+        &_policy{
+            margin-top: 35px;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+        &_agreement{
+            margin-top: 30px;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+        &_vk{
+            margin-top: 35px;
+            display: flex;
+            gap: 12px;
+        }
+        &_title{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        &_collection{
+            margin-top: 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &_wrapper{
+            display: flex;
+            gap: 70px;
+        }
+    }
+
+}
+@media (max-width:1005px) {
+    .footer{
+        &__wrapper{
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+    }
+    
+}
+@media (max-width:700px) {
+    .footer{
+        &__wrapper{
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 50px;
+            
+        }
+    }
+    
+}
+@media (max-width:550px) {
+    .footer{
+        text-align: center;
+        &__card{
+            &_logo{
+                justify-content: center;
+            }
+            &_img{
+                margin: auto;
+                margin-top: 30px;
+            }
+            &_vk{
+                justify-content: center;
+            }
+        }
+        &__card_wrapper{
+            display: block;
+        }
+    }
+    
+}

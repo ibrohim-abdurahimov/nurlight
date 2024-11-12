@@ -1,0 +1,15 @@
+.blog{
+    margin-top: 50px;
+    color: #454545;
+    cursor: pointer;
+    &__collection{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        .home{
+            opacity: 0.3;
+        }
+    }
+}

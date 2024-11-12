@@ -1,0 +1,139 @@
+.contact{
+    .container{
+        position: relative;
+        padding: 0 16px;
+    }
+    margin-top: 50px;
+    color: #454545;
+    cursor: pointer;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__collection{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        .home{
+            opacity: 0.3;
+        }
+    }
+    &__title{
+        margin-top: 15px;
+        font-size: 64px;
+        font-weight: 700;
+    }
+    &__num{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &__time{
+        width: 210px;
+        margin-top: 10px;
+    }
+    &__map{
+        position: relative;
+        margin-top: 60px;
+        margin-bottom: 120px;
+        iframe{
+            width: 100%;
+            height: 675px;
+        }
+        &_wrapper{
+            width: 100%;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            background-color: #fff;
+            padding: 58px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        &_subtitle{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        &_title{
+            margin-top: 10px;
+        }
+        button{
+            padding: 14px 43px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 100px;
+            background-color: #454545;
+            color: #fff;
+            border: 1px solid #454545;
+        }
+        button:hover{
+            background-color: #fff;
+            color: #454545;
+        }
+        button:active{
+            background-color: #454545;
+            color: #fff;
+        }
+    }
+}
+@media (max-width:1005px) {
+    .contact{
+        &__map{
+            &_wrapper{
+                padding: 58px 40px;
+            }
+        }
+    }
+    
+}
+@media (max-width:990px) {
+    .contact{
+        &__map{
+            &_wrapper{
+                margin-top: 50px;
+                position: relative;
+                top: 0;
+                left: 0;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+    
+}
+@media (max-width:850px) {
+    .contact{
+        &__wrapper{
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__time{
+            width: 100%;
+        }
+    }
+    
+}
+@media (max-width:775px) {
+    .contact{
+        &__map{
+            &_wrapper{
+                grid-template-columns: 1fr;
+                grid-gap: 25px;
+            }
+            
+        }
+    }
+    
+}
+@media (max-width:650px) {
+    .contact{
+        &__title{
+            font-size: 50px;
+        }
+    }
+    
+}

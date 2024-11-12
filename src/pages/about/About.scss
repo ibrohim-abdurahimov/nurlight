@@ -1,0 +1,113 @@
+.about{
+    margin-top: 50px;
+    color: #454545;
+    &__collection{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        .home{
+            opacity: 0.3;
+        }
+    }
+    &__wrapper{
+        margin-top: 15px;
+        display: flex;
+        gap: 102px;
+        
+    }
+    &__card{
+        flex: 1;
+        &_title{
+            font-size: 64px;
+            font-weight: 700;
+        }
+        &_wrapper{
+            margin-top: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &_info{
+            padding: 32px;
+            background-color: #F2F2F2;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 83px;
+            h4{
+                font-size: 64px;
+                font-weight: 700;   
+            }
+            p{
+                font-size: 24px;
+            }
+        }
+        &_desc{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width:950px) {
+    .about{
+        &__card{
+            &_title{
+                font-size: 50px;
+            }
+            &_info{
+                h4{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:770px) {
+    .about{
+        &__wrapper{
+            flex-direction: column;
+        }
+    }
+    
+}
+@media (max-width:550px) {
+    .about{
+        &__card{
+            &_title{
+                font-size: 45px;
+            }
+            &_info{
+                h4{
+                    font-size: 45px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:400px) {
+    .about{
+        &__card{
+            &_title{
+                font-size: 35px;
+            }
+            &_info{
+                h4{
+                    font-size: 35px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+            &_desc{
+                font-size: 14px;
+            }
+        }
+    }
+}

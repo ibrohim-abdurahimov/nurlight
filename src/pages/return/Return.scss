@@ -1,0 +1,121 @@
+.return{
+    margin-top: 50px;
+    margin-bottom: 120px;
+    color: #454545;
+    cursor: pointer;
+    &__collection{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        .home{
+            opacity: 0.3;
+        }
+    }
+    &__wrapper{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        gap: 350px;
+    }
+    &__title{
+        font-size: 64px;
+        font-weight: 700;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        color: #000;
+        &_title{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        &_collection{
+            font-size: 20px;
+
+        }
+        &_item{
+            color: #2F4DA3;
+            list-style: disc;
+        }
+        &_desc{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .return{
+        &__wrapper{
+            gap: 250px;
+        }
+        &__title{
+            font-size: 50px;
+        }
+
+    }
+}
+@media (max-width:800px) {
+    .return{
+        &__wrapper{
+            padding-left: 10px;
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+    
+}
+@media (max-width:650px) {
+    .return{
+        &__title{
+            font-size: 40px;
+        }
+    }
+    
+}
+@media (max-width:550px) {
+    .return{
+        margin-bottom: 70px;
+        &__card{
+            &_title{
+                font-size: 20px;
+            }
+            &_item{
+                font-size: 18px;
+            }
+            &_desc{
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+@media (max-width:450px) {
+    .return{
+        &__wrapper{
+            gap: 30px;
+        }
+        &__title{
+            font-size: 30px;
+        }
+        &__card{
+            &_title{
+                font-size: 18px;
+            }
+            &_item{
+                font-size: 16px;
+            }
+            &_desc{
+                font-size: 16px;
+            }
+        }
+    }
+    
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Footer from '../../components/footer/Footer'
 import { Outlet } from 'react-router-dom'
 
@@ -6,12 +6,12 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
     <>
-      <Footer />
       <main>
         <Outlet/>
       </main>
+      <Footer />
     </>
   )
 }
 
-export default Layout
+export default memo(Layout) 
