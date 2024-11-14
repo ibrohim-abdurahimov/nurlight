@@ -31,11 +31,11 @@ const Products = () => {
     // }, [])
     const productItems = data?.map((pro) => (
         <div data-aos="zoom-out" key={pro.id} className="products__card">
+            <div className="products__card_img">
             <Link to={`/product/${pro.id}`}>
-                <div className="products__card_img">
-                    <img src={pro.img} alt="" />
-                </div>
+                <img src={pro.img} alt="" />
             </Link>
+            </div>
             <div className='products__card_like'>
                 <CiHeart />
             </div>

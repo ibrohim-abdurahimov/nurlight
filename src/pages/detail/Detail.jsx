@@ -16,11 +16,6 @@ const Detail = () => {
         <section className='detail'>
             <div className="container">
                 <div className="detail__wrapper">
-                    <div className="detail__img">
-                        <img src={data.img} alt="" />
-                    </div>
-                </div>
-                <div className="detail__wrapper">
                     <div className="detail__image">
                         <img src={data.img} alt="" />
                     </div>
