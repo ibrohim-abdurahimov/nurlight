@@ -1,9 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import "./Return.scss"
 import { NavLink } from 'react-router-dom'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 const Return = () => {
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+      },[])
     return (
         <>
             <section className='return'>

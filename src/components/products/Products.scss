@@ -41,15 +41,21 @@
         margin-top: 90px;
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-gap: 5px;
+        grid-gap: 25px;
     }
     &__card{
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
         position: relative;
-        padding: 11px 30px 30px 30px;
+        padding: 11px 35px 30px 30px;
+        
         &_img{
             margin: auto;
-            width: 173px;
+            overflow: hidden;
+            // width: 173px;
+            img{
+                transition: .3s;
+                width: 100%;
+            }
         }
         &_like{
             position: absolute;
@@ -87,6 +93,9 @@
                 font-size: 16px;
             }
         }
+    }
+    .products__card img:hover{
+        transform: scale(1.1);
     }
 }
 @media (max-width:1100px) {

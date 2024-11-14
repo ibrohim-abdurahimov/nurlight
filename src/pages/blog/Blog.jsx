@@ -1,10 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import "./Blog.scss"
 import { NavLink } from 'react-router-dom'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import Blogs from "../../components/blog/Blog"
 
 const Blog = () => {
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+      },[])
     return (
         <>
             <section className='blog'>

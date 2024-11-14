@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import './About.scss'
 import Brands from '../../components/brands/Brands'
 import Blog from '../../components/blog/Blog'
@@ -8,6 +8,9 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 const About = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[])
   return (
     <>
       <section className='about'>

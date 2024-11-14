@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Garant.scss"
 import { NavLink } from 'react-router-dom'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 const Garant = () => {
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+      },[])
     return (
         <>
             <section className='garant'>

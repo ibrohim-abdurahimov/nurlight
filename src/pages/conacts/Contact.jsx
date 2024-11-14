@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Contact.scss"
 import { NavLink } from 'react-router-dom'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 const Contact = () => {
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+      },[])
     return (
         <div>
             <section className="contact">

@@ -1,0 +1,86 @@
+.nofound{
+    margin-top: 50px;
+    margin-bottom: 120px;
+    text-align: center;
+    h2{
+        font-size: 400px;
+        font-weight: 700;
+        color: #454545;
+        opacity: 0.1;
+    }
+    p{
+        margin-top: 18px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #454545;
+        margin-bottom: 60px;
+    }
+    button{
+        display: block;
+        margin: 20px auto;
+        color: #fff;
+        background-color: #454545;
+        border: 1px solid #454545;
+        padding: 14px 62px;
+        border-radius: 100px;
+    }
+    button:hover{
+        background-color: #fff;
+        color: #454545;
+    }
+    button:active{
+        background-color: #454545;
+        color: #fff;
+    }
+}
+@media (max-width:930px) {
+    .nofound{
+        h2{
+            font-size: 350px;
+        }
+    }
+    
+}
+@media (max-width:720px) {
+    .nofound{
+        h2{
+            font-size: 300px;
+        }
+    }
+    
+}
+@media (max-width:585px) {
+    .nofound{
+        margin-top: 30px;
+        
+        h2{
+            font-size: 250px;
+        }
+    }
+    
+}
+@media (max-width:500px) {
+    .nofound{
+        h2{
+            font-size: 200px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    
+}
+@media (max-width:400px) {
+    .nofound{
+        h2{
+            font-size: 150px;
+        }
+        p{
+            font-size: 16px;
+        }
+        button{
+            font-size: 14px;
+        }
+    }
+    
+}
