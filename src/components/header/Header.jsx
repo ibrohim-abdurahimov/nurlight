@@ -70,7 +70,7 @@ const Header = () => {
                                 <div>
                                     <img src={logo} alt="" />
                                 </div>
-                                <p>NORNLIGHT</p>
+                                <p className='logo__title'>NORNLIGHT</p>
                             </NavLink>
                         </div>
                         <div className="navbar__body_btn">
@@ -86,15 +86,15 @@ const Header = () => {
                         <div className="navbar__body_addition">
                             <div className="navbar__body_icon">
                                 <FaRegHeart />
-                                Избранное
+                                <span>Избранное</span>
                             </div>
-                            <div className='navbar__body_icon'>
+                            <div className='navbar__body_icon cl'>
                                 <RiBarChartGroupedLine />
-                                Сравнение
+                               <span> Сравнение</span>
                             </div>
                             <div className="navbar__body_icon">
                                 <FiShoppingCart />
-                                Корзина
+                                <span>Корзина</span>
                             </div>
                         </div>
                     </div>

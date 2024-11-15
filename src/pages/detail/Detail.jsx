@@ -1,6 +1,6 @@
 import React, { memo, useEffect } from 'react'
 import "./Detail.scss"
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { useFetch } from '../../hooks/UseFetch'
 import { HiMiniMinusSmall, HiMiniPlusSmall } from 'react-icons/hi2'
 import { FaRegHeart } from 'react-icons/fa6'
@@ -17,6 +17,13 @@ const Detail = () => {
     <div>
         <section className='detail'>
             <div className="container">
+                <ul className="detail__collection">
+                    <li className="detail__item">
+                        <NavLink to={-1}>
+                            <span className='home'>Главная</span>
+                        </NavLink>
+                    </li>
+                </ul>
                 <div className="detail__wrapper">
                     <div className="detail__image">
                         <img src={data?.img} alt="" />

@@ -5,6 +5,8 @@ import 'swiper/css/pagination';
 import "./Home.scss"
 import { Pagination } from 'swiper/modules';
 import skidka from "../../assets/hero2 (3).png"
+import skidka1 from "../../assets/hero3 (3).jpg"
+import skidka2 from "../../assets/bra.jpg"
 import card1 from "../../assets/brand.svg"
 import card2 from "../../assets/price.svg"
 import card3 from "../../assets/car.svg"
@@ -15,6 +17,7 @@ import Brands from '../../components/brands/Brands';
 import Blog from '../../components/blog/Blog';
 
 
+
 const Home = () => {
   return (
     <>
@@ -22,6 +25,7 @@ const Home = () => {
         <div className="container2">
 
           <Swiper
+            loop={true}
             spaceBetween={30}
             pagination={{
               clickable: true,
@@ -42,30 +46,20 @@ const Home = () => {
             <SwiperSlide>
               <div className='hero__wrapper'>
                 <div className="hero__text">
-                  <p>Скидка 15% на все подвесные светильники <span>до 5 февраля</span></p>
+                  <p>Скидка 23% на все подвесные светильники <span>до 13 февраля</span></p>
                 </div>
                 <div className="hero__img">
-                  <img src={skidka} alt="" />
+                  <img src={skidka1} alt="" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='hero__wrapper'>
                 <div className="hero__text">
-                  <p>Скидка 15% на все подвесные светильники <span>до 5 февраля</span></p>
+                  <p>Скидка 30% на все подвесные светильники <span>до 25 февраля</span></p>
                 </div>
                 <div className="hero__img">
-                  <img src={skidka} alt="" />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='hero__wrapper'>
-                <div className="hero__text">
-                  <p>Скидка 15% на все подвесные светильники <span>до 5 февраля</span></p>
-                </div>
-                <div className="hero__img">
-                  <img src={skidka} alt="" />
+                  <img src={skidka2} alt="" />
                 </div>
               </div>
             </SwiperSlide>

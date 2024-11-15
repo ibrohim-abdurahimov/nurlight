@@ -11,6 +11,7 @@ import Garant from '../pages/garant/Garant'
 import Contact from '../pages/conacts/Contact'
 import Blog from '../pages/blog/Blog'
 import Detail from '../pages/detail/Detail'
+import Service from '../pages/service/Service'
 
 
 const Router = () => {
