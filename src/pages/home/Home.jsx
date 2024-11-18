@@ -15,10 +15,13 @@ import Catalog from '../../components/catalog/Catalog';
 import Products from '../../components/products/Products';
 import Brands from '../../components/brands/Brands';
 import Blog from '../../components/blog/Blog';
+import { useFetch } from '../../hooks/UseFetch';
 
 
 
 const Home = () => {
+  const { data, error, loading } = useFetch('/products')
+    
   return (
     <>
       <section className='hero'>
@@ -121,7 +124,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Products/>
+      <Products data={data} loading={loading}/>
       <Brands/>
       <Blog />
     </>

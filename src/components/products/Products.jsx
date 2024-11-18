@@ -5,7 +5,7 @@ import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
 import "./Products.scss"
 import { IoCartOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import axios from '../../api';
 import Loading from '../loading/Loading';
 import Aos from 'aos';
@@ -16,12 +16,15 @@ import Model from '../model/Model';
 
 
 import { EffectCube, Pagination } from 'swiper/modules';
+import { useStateValue } from '../../context';
 
-const Products = () => {
+const Products = ({ data, loading }) => {
     // const [products, setProducts] = useState(null)
     // const [loading, setLoading] = useState(false)
     const [item, setItem] = useState(null)
-    const { data, error, loading } = useFetch('/products')
+    const [state, dispatch] = useStateValue()
+
+    // const { data, error, loading } = useFetch('/products')
     useEffect(() => {
         Aos.init()
     }, [])
@@ -37,12 +40,19 @@ const Products = () => {
     // }, [])
     const productItems = data?.map((pro) => (
         <div data-aos="zoom-out" key={pro.id} className="products__card">
-            <div onClick={() => setItem(pro)} className="products__card_img">
-                <img src={pro.img} alt="" />
-
-            </div>
-            <div className='products__card_like'>
-                <CiHeart />
+            <div className="products__card_header">
+                <div onClick={() => setItem(pro)} className="products__card_img">
+                    <img src={pro.img} alt="" />
+                </div>
+                <div onClick={() => dispatch({ type: "ADD_WISHLIST", payload: pro })} className='products__card_like'>
+                    {
+                        state.wishlist?.some(i => i.id === pro.id)
+                        ?
+                        <FaHeart />
+                        :
+                        <FaRegHeart style={{color: 'black'}}/>
+                    }
+                </div>
             </div>
             <p className="products__card_title">
                 <Link to={`/product/${pro.id}`}>
@@ -94,10 +104,10 @@ const Products = () => {
                                 <img src={item?.img} />
                             </SwiperSlide>
                             <SwiperSlide>
-                            <img src={item?.thumbnails[0]} />
+                                <img src={item?.thumbnails[0]} />
                             </SwiperSlide>
                             <SwiperSlide>
-                            <img src={item?.thumbnails[1]} />
+                                <img src={item?.thumbnails[1]} />
                             </SwiperSlide>
                         </Swiper>
                     </div>

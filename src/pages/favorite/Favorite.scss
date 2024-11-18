@@ -1,0 +1,40 @@
+.favorite {
+    margin-bottom: 100px;
+    &__item{
+        display: block;
+        margin-top: 50px;
+        color: #454545;
+        opacity: 0.3;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &__img {
+        width: 30%;
+        margin: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        padding: 14px 48px;
+        background-color: #454545;
+        border: 1px solid #454545;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 100px;
+        color: #fff;
+    }
+    .btn:hover{
+        background-color: #fff;
+        color: #454545;
+    }
+    .btn:active{
+        background-color: #454545;
+        color: #fff;
+    }
+}

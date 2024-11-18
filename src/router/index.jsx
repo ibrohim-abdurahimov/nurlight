@@ -11,7 +11,8 @@ import Garant from '../pages/garant/Garant'
 import Contact from '../pages/conacts/Contact'
 import Blog from '../pages/blog/Blog'
 import Detail from '../pages/detail/Detail'
-import Service from '../pages/service/Service'
+import Favorite from '../pages/favorite/Favorite'
+import Basket from '../pages/basket/Basket'
 
 
 const Router = () => {
@@ -27,6 +28,8 @@ const Router = () => {
                     <Route path='/garant' element={<Garant />} />
                     <Route path='/contact' element={<Contact/>} />
                     <Route path='/blog' element={<Blog/>} />
+                    <Route path='/favorite' element={<Favorite/>} />
+                    <Route path='/basket' element={<Basket/>} />
                     <Route path='/product/:id' element={<Detail/>} />
                 </Route>
                 <Route path='*' element={<NotFound />} />

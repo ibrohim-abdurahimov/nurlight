@@ -84,18 +84,22 @@ const Header = () => {
                             <IoIosSearch />
                         </div>
                         <div className="navbar__body_addition">
-                            <div className="navbar__body_icon">
-                                <FaRegHeart />
-                                <span>Избранное</span>
-                            </div>
+                            <NavLink to={"/favorite"}>
+                                <div className="navbar__body_icon">
+                                    <FaRegHeart />
+                                    <span>Избранное</span>
+                                </div>
+                            </NavLink>
                             <div className='navbar__body_icon cl'>
                                 <RiBarChartGroupedLine />
-                               <span> Сравнение</span>
+                                <span> Сравнение</span>
                             </div>
-                            <div className="navbar__body_icon">
-                                <FiShoppingCart />
-                                <span>Корзина</span>
-                            </div>
+                            <NavLink to={"/basket"}>
+                                <div className="navbar__body_icon">
+                                    <FiShoppingCart />
+                                    <span>Корзина</span>
+                                </div>
+                            </NavLink>
                         </div>
                     </div>
                 </nav>
