@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import "./Products.scss"
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { FaTrashCan } from "react-icons/fa6";
 import axios from '../../api';
 import Loading from '../loading/Loading';
 import Aos from 'aos';
@@ -18,13 +19,23 @@ import Model from '../model/Model';
 import { EffectCube, Pagination } from 'swiper/modules';
 import { useStateValue } from '../../context';
 
-const Products = ({ data, loading }) => {
+const Products = ({ data, loading, admin }) => {
     // const [products, setProducts] = useState(null)
     // const [loading, setLoading] = useState(false)
     const [item, setItem] = useState(null)
     const [state, dispatch] = useStateValue()
 
     // const { data, error, loading } = useFetch('/products')
+    const deleteProduct = (id)=>{
+        axios
+            .delete(`/products/${id}`)
+            .then(res=> {
+                console.log(res)
+                window.location.reload()
+            })
+            .catch(res=> console.log(res))
+            .finally(res=> console.log(res))
+    }
     useEffect(() => {
         Aos.init()
     }, [])
@@ -47,10 +58,10 @@ const Products = ({ data, loading }) => {
                 <div onClick={() => dispatch({ type: "ADD_WISHLIST", payload: pro })} className='products__card_like'>
                     {
                         state.wishlist?.some(i => i.id === pro.id)
-                        ?
-                        <FaHeart />
-                        :
-                        <FaRegHeart style={{color: 'black'}}/>
+                            ?
+                            <FaHeart />
+                            :
+                            <FaRegHeart style={{ color: 'black' }} />
                     }
                 </div>
             </div>
@@ -64,9 +75,19 @@ const Products = ({ data, loading }) => {
             </p>
             <div className="products__card_price">
                 <p>{pro.price} USD</p>
-                <button>
-                    <IoCartOutline />
-                </button>
+                {
+                    admin ?
+                        <button onClick={()=> deleteProduct(pro.id)}>
+                            <FaTrashCan />
+                        </button>
+                        :
+                        <button
+                            disabled={pro.stock <= state.cart.find(i => i.id === pro.id)?.amount}
+                            onClick={() => dispatch({ type: "ADD_CART", payload: pro })}>
+                            <IoCartOutline />
+                        </button>
+
+                }
             </div>
         </div>
     ))

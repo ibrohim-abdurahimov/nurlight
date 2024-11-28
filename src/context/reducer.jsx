@@ -17,6 +17,40 @@ export const reducer = (state, action)=> {
                 localStorage.setItem("storage", JSON.stringify(result))
                 return result
             }
+        case "ADD_CART":
+            let indexItem = state.cart.findIndex(pro=> pro.id === action.payload.id)
+            if(indexItem < 0){
+                result = {...state, cart: [...state.cart, {...action.payload, amount:1}]}
+                localStorage.setItem("storage", JSON.stringify(result))
+                return result
+            }else{
+                result = {...state, cart: state.cart.map((pro, inx)=> (
+                    indexItem === inx ? {...pro, amount: pro.amount + 1} : pro
+                ))}
+                localStorage.setItem("storage", JSON.stringify(result))
+                return result
+            }
+        case "DEC_CART":
+            let decindex = state.cart.findIndex(pro=> pro.id === action.payload.id)
+            result = {...state, cart: state.cart.map((pro, inx)=> (
+                decindex === inx ? {...pro, amount: pro.amount - 1} : pro
+            ))}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        case "REMOVE_CART":
+            result= {...state, cart: state.cart.filter(i=> i.id !== action.payload.id)}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        case "CLEAR_CART":
+            result = {...state, cart: []}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        case "UPDATE_CART":
+            const {  newData } = action.payload;
+            result = state.cart.findIndex(pro=> pro.id === action.payload.id)
+            if (result !== -1) {
+                state.cart[result] = { ...state.cart[result], ...newData };
+              }
         default:
             return state
     }

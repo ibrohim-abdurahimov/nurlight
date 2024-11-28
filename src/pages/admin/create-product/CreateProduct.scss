@@ -1,0 +1,32 @@
+.create{
+    padding: 22px 32px 100px 32px;
+    color: #454545;
+    h2{
+        font-size: 28px;
+    }
+    &__inp{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    input{
+        background-color: #F8F8F8;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 13px;
+        width: 40%;
+    }
+    button{
+        padding: 13px 64px;
+        font-size: 16px;
+        font-family: Inter;
+        color: #fff;
+        background-color: #454545;
+        border: 1px solid #454545;
+        border-radius: 10px;
+    }
+
+}

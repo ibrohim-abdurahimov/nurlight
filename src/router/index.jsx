@@ -13,12 +13,14 @@ import Blog from '../pages/blog/Blog'
 import Detail from '../pages/detail/Detail'
 import Favorite from '../pages/favorite/Favorite'
 import Basket from '../pages/basket/Basket'
+import Admin from '../pages/admin/Admin'
+import CreateProduct from '../pages/admin/create-product/CreateProduct'
+import ManageProduct from '../pages/admin/manage-product/ManageProduct'
 
 
 const Router = () => {
     return (
         <>
-            <Header />
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route path='/' element={<Home />} />
@@ -26,13 +28,17 @@ const Router = () => {
                     <Route path='/payment' element={<Payment />} />
                     <Route path='/return' element={<Return />} />
                     <Route path='/garant' element={<Garant />} />
-                    <Route path='/contact' element={<Contact/>} />
-                    <Route path='/blog' element={<Blog/>} />
-                    <Route path='/favorite' element={<Favorite/>} />
-                    <Route path='/basket' element={<Basket/>} />
-                    <Route path='/product/:id' element={<Detail/>} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/blog' element={<Blog />} />
+                    <Route path='/favorite' element={<Favorite />} />
+                    <Route path='/basket' element={<Basket />} />
+                    <Route path='/product/:id' element={<Detail />} />
                 </Route>
                 <Route path='*' element={<NotFound />} />
+                <Route path='/admin' element={<Admin />} >
+                    <Route path='create-product' element={<CreateProduct/>}/>
+                    <Route path='manage-product' element={<ManageProduct/>}/>
+                </Route>
             </Routes>
         </>
     )

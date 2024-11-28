@@ -127,19 +127,19 @@
     }
     
 }
-@media (max-width:450px) {
-    .detail{
-        &__btn{
-            justify-content: space-between;
-            position: relative;
-            padding-bottom: 100px;
-            button{
-                position: absolute;
-                bottom: 15px;
-                left: 0;
-                width: 100%;
-            }
-        }
-    }
+// @media (max-width:450px) {
+//     .detail{
+//         &__btn{
+//             justify-content: space-between;
+//             position: relative;
+//             padding-bottom: 100px;
+//             button{
+//                 position: absolute;
+//                 bottom: 15px;
+//                 left: 0;
+//                 width: 100%;
+//             }
+//         }
+//     }
     
-}
+// }
