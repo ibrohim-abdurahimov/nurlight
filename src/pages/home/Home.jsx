@@ -16,12 +16,13 @@ import Products from '../../components/products/Products';
 import Brands from '../../components/brands/Brands';
 import Blog from '../../components/blog/Blog';
 import { useFetch } from '../../hooks/UseFetch';
+import { NavLink } from 'react-router-dom';
 
 
 
 const Home = () => {
   const { data, error, loading } = useFetch('/products')
-    
+
   return (
     <>
       <section className='hero'>
@@ -74,7 +75,9 @@ const Home = () => {
         <div className="container">
           <div className='compony__title'>
             <p>Почему NORNLIGHT?</p>
-            <button>О компании</button>
+            <NavLink to={"/about"}>
+              <button>О компании</button>
+            </NavLink>
           </div>
           <div className="compony__wrapper">
             <div className="compony__card">
@@ -124,8 +127,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Products data={data} loading={loading}/>
-      <Brands/>
+      <Products data={data} loading={loading} />
+      <Brands />
       <Blog />
     </>
   )

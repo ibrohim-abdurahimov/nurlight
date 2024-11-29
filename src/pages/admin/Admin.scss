@@ -12,9 +12,18 @@
         height: 100vh;
     }
     &__card{
+        h2{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
         &_body{
+            margin-top: 10px;
             .link{
-                display: block;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                font-size: 18px;
             }
         }
     }

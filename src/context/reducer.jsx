@@ -1,6 +1,8 @@
 export const initialState = JSON.parse(localStorage.getItem("storage")) || {
     wishlist:[],
-    cart:[]
+    cart:[],
+    token: null,
+    reload: false
 }
 
 export const reducer = (state, action)=> {
@@ -50,7 +52,13 @@ export const reducer = (state, action)=> {
             result = state.cart.findIndex(pro=> pro.id === action.payload.id)
             if (result !== -1) {
                 state.cart[result] = { ...state.cart[result], ...newData };
-              }
+            }
+        case "ADD_TOKEN":
+            result = {...state, token: action.payload}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+        case "RELOAD":
+            return {...state, reload: !state.reload}
         default:
             return state
     }

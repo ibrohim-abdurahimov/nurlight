@@ -1,12 +1,13 @@
 import React from 'react'
 import { useFetch } from '../../../hooks/UseFetch'
 import Products from '../../../components/products/Products'
+import { useStateValue } from '../../../context'
 
 const ManageProduct = () => {
-    const { data, error, loading } = useFetch('/products')
+  const [state] = useStateValue()
+    const { data, error, loading } = useFetch('/products', {}, [state.reload])
   return (
     <div>
-        <h2>ManageProduct</h2>
         <Products admin={true} data={data}/>
     </div>
   )

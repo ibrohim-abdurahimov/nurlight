@@ -4,6 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import img1 from "../../assets/blog.png"
 import img2 from "../../assets/blog2.png"
 import img3 from "../../assets/blog3.png"
+import { NavLink } from 'react-router-dom';
 
 
 const Blog = () => {
@@ -13,7 +14,9 @@ const Blog = () => {
                 <div className="container">
                     <div className='blog__title'>
                         <p>Блог</p>
-                        <button>Перейти в блог</button>
+                        <NavLink to={"/blog"}>
+                            <button>Перейти в блог</button>
+                        </NavLink>
                     </div>
                     <div className="blog__wrapper">
                         <div className="blog__card">

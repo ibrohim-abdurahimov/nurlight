@@ -22,7 +22,7 @@ const Blog = () => {
                             <MdKeyboardArrowRight />
                         </li>
                         <li className="blog__item">
-                            <NavLink to={"/gblog"}>
+                            <NavLink to={"/blog"}>
                                 <span>Блог</span>
                             </NavLink>
                         </li>

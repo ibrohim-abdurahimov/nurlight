@@ -31,7 +31,8 @@ const Products = ({ data, loading, admin }) => {
             .delete(`/products/${id}`)
             .then(res=> {
                 console.log(res)
-                window.location.reload()
+                dispatch({type: "RELOAD"})
+                // window.location.reload()
             })
             .catch(res=> console.log(res))
             .finally(res=> console.log(res))

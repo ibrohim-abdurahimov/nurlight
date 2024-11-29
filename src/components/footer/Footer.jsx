@@ -12,12 +12,14 @@ const Footer = () => {
       <div className="container">
         <div className="footer__wrapper">
           <div className="footer__card">
-            <div className="footer__card_logo">
-              <div>
-                <img src={logo} alt="" />
+            <NavLink to={"/"}>
+              <div className="footer__card_logo">
+                <div>
+                  <img src={logo} alt="" />
+                </div>
+                <p>NORNLIGHT</p>
               </div>
-              <p>NORNLIGHT</p>
-            </div>
+            </NavLink>
             <p className="footer__card_num">
               8 (800) 890-46-56
             </p>

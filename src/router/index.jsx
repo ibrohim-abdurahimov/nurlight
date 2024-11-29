@@ -16,6 +16,8 @@ import Basket from '../pages/basket/Basket'
 import Admin from '../pages/admin/Admin'
 import CreateProduct from '../pages/admin/create-product/CreateProduct'
 import ManageProduct from '../pages/admin/manage-product/ManageProduct'
+import Auth from '../pages/auth/Auth'
+import Login from '../pages/login/Login'
 
 
 const Router = () => {
@@ -34,10 +36,13 @@ const Router = () => {
                     <Route path='/basket' element={<Basket />} />
                     <Route path='/product/:id' element={<Detail />} />
                 </Route>
+                <Route path='/login' element={<Login />} />
                 <Route path='*' element={<NotFound />} />
-                <Route path='/admin' element={<Admin />} >
-                    <Route path='create-product' element={<CreateProduct/>}/>
-                    <Route path='manage-product' element={<ManageProduct/>}/>
+                <Route path='/' element={<Auth />}>
+                    <Route path='admin' element={<Admin />} >
+                        <Route path='create-product' element={<CreateProduct />} />
+                        <Route path='manage-product' element={<ManageProduct />} />
+                    </Route>
                 </Route>
             </Routes>
         </>
