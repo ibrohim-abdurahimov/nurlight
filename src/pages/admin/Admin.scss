@@ -12,6 +12,9 @@
         height: 100vh;
     }
     &__card{
+        .out{
+            cursor: pointer;
+        }
         h2{
             display: flex;
             align-items: center;

@@ -30,7 +30,7 @@ const Admin = () => {
                     </div>
                 </div>
                 <div className="admin__card">
-                    <h2 onClick={handleLogout}>Log out <MdLogout/></h2>
+                    <h2 className='out' onClick={handleLogout}>Log out <MdLogout/></h2>
                 </div>
             </div>
             <div className='admin__table'>
